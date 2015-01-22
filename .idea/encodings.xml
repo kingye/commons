@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/geo/ConcaveHull.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/geo/ConvexHull.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/geo/GeoPos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/geo/GeoUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/geo/HullFinder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/InterSection.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/Node.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/Path.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/RoadNetwork.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/RoadNetworkBuilder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/Section.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/network/Way.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/route/DijkstraRouteFinder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/route/Route.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/route/RouteFinder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/genie/commons/route/UnreachableException.java" charset="UTF-8" />
+  </component>
+</project>
