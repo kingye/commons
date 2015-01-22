@@ -5,7 +5,7 @@ import com.genie.commons.geo.GeoPos;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.Map;
 
 
 public class RoadNetworkBuilder {
@@ -14,7 +14,7 @@ public class RoadNetworkBuilder {
 	private TagFilter filter;
 	private static class RoadNetorkTagFilter implements com.genie.commons.network.TagFilter{
 
-		public boolean contains(HashMap<String, String> types) {
+		public boolean contains(Map<String, String> types) {
 			for(String id : types.keySet()) {
 				if("highway".equals(id)) {
 					String v = types.get(id);

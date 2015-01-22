@@ -1,6 +1,7 @@
 package com.genie.commons.network;
 
 import com.genie.commons.geo.GeoPos;
+import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -11,14 +12,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by d032459 on 15/1/5.
  */
 public class OSMParser {
-    private final HashMap<String, Node> nodeList = new HashMap<String, Node>();
-    private final HashMap<String, Way> wayList = new HashMap<String, Way>();
+    private final Map<String, Node> nodeList = HashObjObjMaps.newMutableMap();
+    private final Map<String, Way> wayList = HashObjObjMaps.newMutableMap();
 
     private GeoPos min;
     private GeoPos max;

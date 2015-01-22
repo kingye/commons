@@ -9,7 +9,7 @@ import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by d032459 on 15/1/8.
@@ -19,7 +19,7 @@ public class TestRoute {
         try {
             RoadNetworkBuilder.instance.build(args[0],  new TagFilter() {
                 @Override
-                public boolean contains(HashMap<String, String> types) {
+                public boolean contains(Map<String, String> types) {
                     for(String id : types.keySet()) {
                         if("highway".equals(id)) {
                             String v = types.get(id);
