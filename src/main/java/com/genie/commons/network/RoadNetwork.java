@@ -3,7 +3,8 @@ package com.genie.commons.network;
 import com.genie.commons.geo.GeoPos;
 import com.genie.commons.geo.GeoUtils;
 import com.genie.commons.route.DijkstraRouteFinder;
-import com.gs.collections.impl.map.mutable.UnifiedMap;
+
+import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
 
 import java.util.*;
 
@@ -23,8 +24,8 @@ public class RoadNetwork {
 
 
 	public RoadNetwork() {
-		sections = new UnifiedMap<String, Section>();//new HashMap<String, Section>();
-		interSections = new UnifiedMap<String, InterSection>();// new HashMap<String, InterSection>();
+		sections = HashObjObjMaps.newMutableMap();//new HashMap<String, Section>();
+		interSections = HashObjObjMaps.newMutableMap();// new HashMap<String, InterSection>();
 		tileSectionMap = new TileMap<Section>(Z);
 
 

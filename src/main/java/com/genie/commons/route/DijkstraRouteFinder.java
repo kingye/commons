@@ -5,7 +5,8 @@ import com.genie.commons.geo.GeoPos;
 import com.genie.commons.network.InterSection;
 import com.genie.commons.network.RoadNetwork;
 import com.genie.commons.network.Section;
-import com.gs.collections.impl.map.mutable.UnifiedMap;
+import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
+
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -38,7 +39,7 @@ public class DijkstraRouteFinder implements RouteFinder {
     public DijkstraRouteFinder(RoadNetwork n) {
         network = n;
         Collection<InterSection> interSections = network.getInterSections();
-        vertexMap = new UnifiedMap<InterSection, Vertex>(interSections.size());//new HashMap<InterSection, Vertex>();
+        vertexMap = HashObjObjMaps.newMutableMap(interSections.size());//new HashMap<InterSection, Vertex>();
         // set-up vertices
         for (InterSection is : interSections) {
             Vertex v = new Vertex(is);

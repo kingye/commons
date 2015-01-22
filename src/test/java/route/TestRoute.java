@@ -44,8 +44,7 @@ public class TestRoute {
 
                 }
             });
-            java.util.Map<String, String> m = HashObjObjMaps.<String, String>newMutableMap();
-            m.put("test", "test");
+
             RoadNetwork network = RoadNetworkBuilder.instance.getNetwork();
             DijkstraRouteFinder f = new DijkstraRouteFinder(network);
             long t0 = System.currentTimeMillis();

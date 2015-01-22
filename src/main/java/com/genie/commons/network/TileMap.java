@@ -2,8 +2,8 @@ package com.genie.commons.network;
 
 import com.genie.commons.geo.GeoPos;
 import com.genie.commons.geo.GeoUtils;
-import com.gs.collections.impl.list.mutable.FastList;
-import com.gs.collections.impl.map.mutable.UnifiedMap;
+
+import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
 
 
 import java.util.*;
@@ -89,7 +89,7 @@ public class TileMap<T> {
 
     public TileMap(double z) {
         //Use GS-collections for better performance of hashmap -- 2015-01-22
-        this.map = new UnifiedMap<TileId, Map<GeoPos, T>>();//new HashMap<TileId, Map<GeoPos, T>>();
+        this.map = HashObjObjMaps.newMutableMap();//new HashMap<TileId, Map<GeoPos, T>>();
         this.z = z;
     }
 
@@ -98,7 +98,7 @@ public class TileMap<T> {
         Map<GeoPos, T> values = getValues(id);
         if(values == null) {
             //Use GS for better performance of hashmap -- 2015-01-22
-            values = new UnifiedMap<GeoPos, T>();//new HashMap<GeoPos, T>();
+            values = HashObjObjMaps.newMutableMap();//new HashMap<GeoPos, T>();
             map.put(id, values);
         }
         values.put(p, v);
@@ -179,7 +179,7 @@ public class TileMap<T> {
         Map<GeoPos, T > values =  getValues(pt, level);
         TreeSet<GeoPos> sorted = new TreeSet<GeoPos>(new DistanceComparator(pt));
         sorted.addAll(values.keySet());
-        FastList<T> r = new FastList<T>(values.size());
+        ArrayList<T> r = new ArrayList<T>(values.size());
         for(GeoPos p : sorted) {
             r.add(values.get(p));
         }
